@@ -1,8 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 import { getSpotifyToken } from '@/spotifyTokenManager';
+import { NextRequest } from 'next/server';
 
-export  async function GET(req: NextApiRequest) {
+export  async function GET(req: NextRequest) {
   try {
     const token = await getSpotifyToken();
     const response = await axios.get('https://api.spotify.com/v1/browse/categories?country=IN', {
