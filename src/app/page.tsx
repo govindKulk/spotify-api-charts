@@ -145,7 +145,7 @@ const Home = () => {
     <div className="bg-slate-800 text-white p-4">
       <h1 className='text-4xl font-bold text-slate-400'>Spotify Dashboard</h1>
 
-      <div className='max-w-screen-lg mx-auto grid grid-cols-2 gap-4'>
+      <div className='max-w-screen-lg lg:mx-auto grid grid-cols-1 md:grid-cols-2 gap-4'>
               {/* Bar chart for Top Tracks */}
       <div className="shadow-xl rounded-xl border-slate-400 bg-slate-900 p-4 text-slate-300 font-bold flex flex-col gap-2">
         <h2 className="text-lg md:text-2xl font-bold ">Top 50 India Playlist</h2>

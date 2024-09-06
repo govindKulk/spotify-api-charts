@@ -1,8 +1,8 @@
 import { getSpotifyToken } from '@/spotifyTokenManager';
 import axios from 'axios';
-import { NextApiRequest } from 'next';
+import { NextRequest } from 'next/server';
 
-export async function GET (req: NextApiRequest) {
+export async function GET (req: NextRequest) {
   try {
     const token = await getSpotifyToken();
     const response = await axios.get('https://api.spotify.com/v1/artists?ids=3TVXtAsR1Inumwj472S9r4,66CXWjxzNUsdJxJ2JdwvnR', {
